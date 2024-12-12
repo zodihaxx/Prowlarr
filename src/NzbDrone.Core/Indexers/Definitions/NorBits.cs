@@ -190,7 +190,7 @@ public class NorBitsRequestGenerator : IIndexerRequestGenerator
         }
         else if (!string.IsNullOrWhiteSpace(term))
         {
-            searchTerm = "search=" + term.UrlEncode(Encoding.UTF8);            
+            searchTerm = "search=" + term.UrlEncode(Encoding.UTF8);
         }
 
         searchUrl += "?" + searchTerm + "&" + parameters.GetQueryString();
