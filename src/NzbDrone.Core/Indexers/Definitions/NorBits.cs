@@ -193,12 +193,12 @@ public class NorBitsRequestGenerator : IIndexerRequestGenerator
             searchTerm = "search=" + term.UrlEncode(Encoding.GetEncoding(28591));
             
             searchTerm = searchTerm
-            .Replace("%E6", "æ")
-            .Replace("%F8", "ø")
-            .Replace("%E5", "å")
-            .Replace("%C6", "Æ")
-            .Replace("%D8", "Ø")
-            .Replace("%C5", "Å");
+            .Replace("%E6", "%C3%A6")
+            .Replace("%F8", "%C3%B8")
+            .Replace("%E5", "%C3%A5")
+            .Replace("%C6", "%C3%86")
+            .Replace("%D8", "%C3%98")
+            .Replace("%C5", "%C3%85");
         }
 
         searchUrl += "?" + searchTerm + "&" + parameters.GetQueryString();
